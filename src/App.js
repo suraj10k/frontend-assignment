@@ -7,6 +7,7 @@ import ConfirmForm from './components/auth/ConfirmForm';
 import PrivateRoute from './components/route/PrivateRoute';
 import Dashboard from './components/dashboard/Dashboard';
 import ShowData from './components/dashboard/ShowData';
+import Invoice from './components/dashboard/Invoice';
 
 function App() {
    
@@ -16,10 +17,13 @@ function App() {
     <Switch>
       <PrivateRoute exact path='/'>
         <Dashboard/>
-        </PrivateRoute>
+      </PrivateRoute>
       <PrivateRoute exact path='/showData'>
         <ShowData />
-        </PrivateRoute> 
+      </PrivateRoute> 
+      <PrivateRoute exact path='/invoice'>
+        <Invoice />
+      </PrivateRoute>
       <Route path="/login">
         <LoginForm />
       </Route>

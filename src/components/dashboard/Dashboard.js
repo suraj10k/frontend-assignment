@@ -102,7 +102,7 @@ const handleDeleteFields = (index) =>{
         </Heading>
       </Box>
       <Text fontSize="lg">Welcome, {user.email} !</Text>
-      <form onSubmit={enterData}>e
+      <form onSubmit={enterData}>
         <FormControl>
         <Box h="450px" mt="25px">
         <Stack spacing={2}>
