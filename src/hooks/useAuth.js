@@ -4,13 +4,14 @@ import 'firebase/auth'
 
 //Initialise Firebase
 firebase.initializeApp({
-    apiKey: process.env.REACT_APP_FB_API,
-    authDomain: process.env.REACT_APP_FB_DOMAIN,
-    databaseURL: process.env.REACT_APP_FB_DATABASE,
-    projectId: process.env.REACT_APP_FB_PROJECT,
-    storageBucket: process.env.REACT_APP_FB_BUCKET,
-    messagingSenderId: process.env.REACT_APP_FB_SENDER,
-    appID: process.env.REACT_APP_FB_APP,
+    apiKey: "AIzaSyBy55sO1615SVHRt7dq8s0odyKiltjkOv0",
+    authDomain: "task-4d5bd.firebaseapp.com",
+    databaseURL: "https://task-4d5bd-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "task-4d5bd",
+    storageBucket: "task-4d5bd.appspot.com",
+    messagingSenderId: "474694366952",
+    appId: "1:474694366952:web:5520b2fc7f802cf0097b5d"
+
 })
 
 const AuthContext = createContext()

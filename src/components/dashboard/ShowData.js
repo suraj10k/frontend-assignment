@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import fire from "firebase"
 import Data from './Data';
+
 const ShowData = () => {
 const [showData,setShowData] = useState();
 

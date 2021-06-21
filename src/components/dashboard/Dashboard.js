@@ -21,13 +21,12 @@ import {
   Grid,
 } from '@chakra-ui/react';
 import { Stack, HStack, VStack } from "@chakra-ui/react"
-import { PhoneIcon, AddIcon, WarningIcon ,CheckIcon,EmailIcon,DeleteIcon} from '@chakra-ui/icons'
+import { PhoneIcon, AddIcon, WarningIcon ,CheckIcon,EmailIcon,DeleteIcon,SearchIcon,ArrowForwardIcon} from '@chakra-ui/icons'
 
 
 const Dashboard = () => {
   const { user } = useAuth();
   const { handleSubmit, register, errors, setError, formState } = useForm();
-  
   const [companyName,setCompanyName] = useState('');
   const [customerName,setCustomerName] = useState('');
   const [address,setAddress] = useState('');
@@ -36,7 +35,10 @@ const Dashboard = () => {
   const [inputFields,setInputFields] = useState([
     { items: '', materials: '', cost: ''}
   ])
-
+  const [paid,setPaid] = useState(0)
+  const mark = () => {
+    return setPaid(1);
+  }
   const [value, setValue] = React.useState("")
   
   const handleInputChange = (e) => {
@@ -136,7 +138,7 @@ const handleDeleteFields = (index) =>{
                     <FormLabel htmlFor="labour">Cost</FormLabel>
                     <Input type='text' name="cost" value={inputField.cost} onChange={event => handleChangeInput(index,event)} />
                   </Box>
-                  <Box w="100%" h="10%">  
+                  <Box w="100%" h="10%" align="right">  
                     <Text fontSize="md" ml={12} lineHeight="630%" >
                         <IconButton
                           bgGradient="linear(to-l, #01baef,#20bf55)"
@@ -182,7 +184,7 @@ const handleDeleteFields = (index) =>{
                 Submit
               </Button>
             </Box>
-            <Box height="80px" align="right">
+            <Box align="right">
               <Button
                 mt={4}
                 size="md"
@@ -191,15 +193,8 @@ const handleDeleteFields = (index) =>{
                 onClick={event =>  window.location.href='/showData'}
                 >
                 Show Invoice
-              </Button>
-              <IconButton
-                mt={4}
-                variant="outline"
-                colorScheme="teal"
-                aria-label="Send email"
-                icon={<EmailIcon />}
-              />
-            </Box>
+                </Button>
+              </Box>
           </SimpleGrid>
         </FormControl>
       </form>
